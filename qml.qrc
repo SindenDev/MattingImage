@@ -5,6 +5,5 @@
         <file>SelectionArea.qml</file>
         <file>MarkerTypeModel.qml</file>
         <file>MarkerTypeSelecter.qml</file>
-        <file>行车记录仪4.png</file>
     </qresource>
 </RCC>
