@@ -26,7 +26,7 @@ Item {
 
         delegate: Rectangle{
             id: selectionType
-            width: 38; height: 38
+            width: 40; height: 40
 
             border.color:checked?"green":"white"
             border.width: 2
@@ -39,8 +39,8 @@ Item {
             Text {
                 anchors.fill: parent
                 text: qsTr(name)
-                font.pointSize: 6
-                color: "white"
+                font.pointSize: 7
+                color: (6 == index) ? "white":"black"
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
             }

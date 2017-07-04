@@ -14,7 +14,7 @@ ColumnLayout{
 
     function init(){
         if(canvas.context == null) return;
-        console.debug("init-->Canvas",borderData.getColorNames()[1])
+//        console.debug("init-->Canvas",borderData.getColorNames()[1])
         canvas.context.lineJoin = "round";
         canvas.context.miterLimit=5;
         canvas.context.lineWidth = 2.0
@@ -33,7 +33,7 @@ ColumnLayout{
     function saveCurrentPen(type, color){
         console.debug("saveCurrentPen")
         var data = pointsJSON[currentIndex]
-        console.debug(pointsJSON.length, JSON.stringify(data))
+//        console.debug(pointsJSON.length, JSON.stringify(data))
         if(data.hasOwnProperty("type")){
             data.type = mMarkerTypeSelecter.currentType
         }
@@ -46,7 +46,7 @@ ColumnLayout{
 
     function pushPointJSON(x, y){
 //        var json_data = JSON.parse(pointsJSON)
-        console.debug("pushPointJSON")
+//        console.debug("pushPointJSON")
         var data = pointsJSON[currentIndex]
 
         if(data.hasOwnProperty("points")){
@@ -78,11 +78,11 @@ ColumnLayout{
     function popPointJSON(){
         var data = pointsJSON[currentIndex]
 
-        if(data.hasOwnProperty("points")){
+//        if(data.hasOwnProperty("points")){
             var points = data.points
             points.pop()
             data.points = points
-        }
+//        }
         pointsJSON[currentIndex] = data
     }
 
@@ -119,7 +119,7 @@ ColumnLayout{
 
                         context.strokeStyle = pointsJSON[i].color
                         context.fillStyle = pointsJSON[i].color
-                        console.debug("color:",i,pointsJSON[i].color)
+//                        console.debug("color:",i,pointsJSON[i].color)
                         var points = pointsJSON[i].points
                         for(var j in points){
                             var x = points[j].x
@@ -144,7 +144,7 @@ ColumnLayout{
             }
             Text {
                 id: currentIndexText
-                text: currentIndex+1
+//                text: currentIndex+1
                 font.pointSize: 16
             }
             MouseArea{

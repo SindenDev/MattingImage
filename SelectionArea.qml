@@ -53,7 +53,7 @@ ListView {
 
                 text: qsTr(""+index)
                 font.pointSize: 36
-                color: "grey"
+                color:parent.checked ?"blue" : "grey"
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
             }
